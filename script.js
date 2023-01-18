@@ -9,7 +9,12 @@ const app = Vue.createApp({
             mail:''
         }
     },
-   
+    mounted(){
+        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+        .then((response) => {
+            this.mail = response.data.response;
+        })
+    }
   });
   
   
