@@ -10,6 +10,11 @@ const app = Vue.createApp({
             isLoading : false,
         }
     },
+    computed:{
+        listResult(){
+            if(!this.mails) return;
+        }
+    },
     // METODO CHE MI RECUPERA L'API DELLA SINGOLA MAIL
     methods:{
         getRandomMail(){
