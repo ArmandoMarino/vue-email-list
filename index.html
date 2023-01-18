@@ -21,10 +21,14 @@
 </head>
 <body>
     <main>
-        <div id="root">
-            <ul>
-                <li v-for="mail in mails">{{mail}}</li>
-            </ul>
+        <div class="container text-center" id="root">
+            <div v-if="isLoading" ><i class="fa-solid fa-circle-notch fa-spin"></i></div>
+            <div v-else>
+                <ul>
+                    <li v-for="mail in mails">{{mail}}</li>
+                </ul>
+            </div>
+            
         </div>
         
     </main>
