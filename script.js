@@ -12,7 +12,7 @@ const app = Vue.createApp({
     },
     computed:{
         listResult(){
-            if(!this.mails) return;
+            if(this.mails) return;
         }
     },
     // METODO CHE MI RECUPERA L'API DELLA SINGOLA MAIL
