@@ -6,14 +6,22 @@ console.log(Vue + "Vue OK");
 const app = Vue.createApp({
     data() {
         return{
-            mail:''
+            mails: [],
+            isLoading : false,
+        }
+    },
+    methods:{
+        getRandomMail(){
+            axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
+        .then((response) => {
+            this.mails.push(response.data.response);
+        })
         }
     },
     mounted(){
-        axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
-        .then((response) => {
-            this.mail = response.data.response;
-        })
+        for(let i = 0; i < 5; i++){
+          this.getRandomMail();  
+        }
     }
   });
   
