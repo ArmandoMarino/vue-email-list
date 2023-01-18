@@ -10,6 +10,7 @@ const app = Vue.createApp({
             isLoading : false,
         }
     },
+    // METODO CHE MI RECUPERA L'API DELLA SINGOLA MAIL
     methods:{
         getRandomMail(){
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
@@ -18,6 +19,7 @@ const app = Vue.createApp({
         })
         }
     },
+    // FUNZIONE RICHIAMATA ALLA PAGINA MONTATA PER 5 VOLTE
     mounted(){
         for(let i = 0; i < 5; i++){
           this.getRandomMail();  
