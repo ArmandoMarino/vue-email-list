@@ -21,7 +21,7 @@ const app = Vue.createApp({
     },
     // FUNZIONE RICHIAMATA ALLA PAGINA MONTATA PER 5 VOLTE
     mounted(){
-        for(let i = 0; i < 5; i++){
+        for(let i = 0; i < 10; i++){
           this.getRandomMail();  
         }
     }
